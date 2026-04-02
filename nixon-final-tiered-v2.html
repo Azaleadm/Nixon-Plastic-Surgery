@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nixon Plastic Surgery -  Digital Marketing Proposal</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700;800&family=Barlow+Condensed:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root {
+  --bg:        #1e2229;
+  --bg-mid:    #252b34;
+  --bg-card:   #2c333e;
+  --bg-hi:     #333c48;
+  --text:      #eef0f4;
+  --muted:     rgba(238,240,244,0.55);
+  --faint:     rgba(238,240,244,0.28);
+  --whisper:   rgba(238,240,244,0.06);
+  --blue:      #2d7dd2;
+  --blue-lt:   #5ea3e8;
+  --blue-dk:   #1a5da8;
+  --blue-pale: rgba(45,125,210,0.12);
+  --steel:     #4a6fa8;
+  --teal:      #2a8a7a;
+  --amber:     #c47c2a;
+  --red:       #a03838;
+  --border:    rgba(238,240,244,0.1);
+  --border2:   rgba(238,240,244,0.06);
+  --bblue:     rgba(45,125,210,0.28);
+  --pad:       60px;
+}
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* ── COVER ── */
+.cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--pad);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.cover-accent-bar {
+  position:absolute; top:0; left:0; right:0; height:4px;
+  background: linear-gradient(90deg, var(--blue) 0%, var(--blue-lt) 60%, rgba(94,163,232,0.3) 100%);
+}
+.cover::before {
+  content:''; position:absolute; top:-160px; right:-160px;
+  width:520px; height:520px; border-radius:50%;
+  border:1px solid rgba(45,125,210,0.1); pointer-events:none;
+}
+.cover::after {
+  content:''; position:absolute; top:-280px; right:-280px;
+  width:800px; height:800px; border-radius:50%;
+  border:1px solid rgba(45,125,210,0.05); pointer-events:none;
+}
+.cover-top { display:flex; justify-content:space-between; align-items:flex-start; position:relative; z-index:2; }
+.cover-logo-name { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:700; color:var(--text); letter-spacing:0.1em; text-transform:uppercase; display:block; }
+.cover-logo-sub  { font-size:12px; letter-spacing:0.22em; text-transform:uppercase; color:var(--blue-lt); margin-top:5px; display:block; font-weight:500; }
+.cover-badge { background:var(--whisper); border:1px solid var(--border); padding:9px 20px; font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); font-weight:500; }
+.cover-main { position:relative; z-index:2; }
+.cover-eyebrow { font-size:13px; letter-spacing:0.22em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:24px; display:flex; align-items:center; gap:16px; font-weight:600; }
+.cover-eyebrow::before { content:''; width:44px; height:2px; background:var(--blue); flex-shrink:0; }
+.cover-h1 { font-family:'Barlow Condensed',sans-serif; font-size:clamp(52px,7vw,94px); font-weight:800; line-height:0.96; color:var(--text); margin-bottom:24px; text-transform:uppercase; letter-spacing:0.01em; }
+.cover-h1 em { display:block; font-style:italic; font-family:'Barlow',sans-serif; font-weight:300; font-size:0.52em; color:var(--blue-lt); text-transform:none; letter-spacing:0.02em; line-height:1.4; margin-top:6px; }
+.cover-sub { font-size:17px; color:var(--muted); line-height:1.78; max-width:560px; margin-bottom:52px; font-weight:300; }
+.cover-sub strong { color:var(--text); font-weight:500; }
+.cover-stats { display:flex; border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.cstat { flex:1; padding:20px 22px; border-right:1px solid var(--border); }
+.cstat:last-child { border-right:none; }
+.cstat-num { font-family:'Barlow Condensed',sans-serif; font-size:36px; font-weight:800; color:var(--blue-lt); display:block; line-height:1; margin-bottom:6px; letter-spacing:0.02em; }
+.cstat-lbl { font-size:11px; letter-spacing:0.18em; text-transform:uppercase; color:var(--faint); font-weight:500; }
+.cover-bottom { display:flex; justify-content:space-between; align-items:flex-end; font-size:13px; color:var(--faint); letter-spacing:0.05em; position:relative; z-index:2; }
+
+/* ── MAIN WRAPPER ── */
+.doc { max-width:980px; margin:0 auto; padding:0 var(--pad) 120px; }
+
+/* ── SECTIONS ── */
+.sec { padding-top:72px; border-top:1px solid var(--border2); margin-top:72px; }
+.sec:first-child { border-top:none; margin-top:0; }
+.sec-hd { display:flex; align-items:flex-end; justify-content:space-between; margin-bottom:36px; gap:24px; }
+.sec-num { font-family:'Barlow Condensed',sans-serif; font-size:80px; font-weight:800; color:var(--blue); opacity:0.1; line-height:1; display:block; margin-bottom:-12px; letter-spacing:-0.02em; }
+.sec-eye { font-size:12px; letter-spacing:0.24em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:10px; font-weight:600; }
+.sec-title { font-family:'Barlow Condensed',sans-serif; font-size:clamp(28px,3.4vw,48px); font-weight:700; color:var(--text); line-height:1.06; text-transform:uppercase; letter-spacing:0.02em; }
+.sec-title em { font-style:italic; color:var(--blue-lt); text-transform:none; font-family:'Barlow',sans-serif; font-weight:400; font-size:0.78em; display:block; letter-spacing:0.01em; margin-top:2px; }
+.sec-tag { font-size:11px; letter-spacing:0.16em; text-transform:uppercase; background:var(--blue-pale); border:1px solid var(--bblue); color:var(--blue-lt); padding:7px 16px; white-space:nowrap; align-self:flex-start; flex-shrink:0; font-weight:600; }
+
+/* ── CARDS ── */
+.grid-2 { display:grid; grid-template-columns:1fr 1fr; gap:3px; margin:16px 0; }
+.grid-3 { display:grid; grid-template-columns:1fr 1fr 1fr; gap:3px; margin:16px 0; }
+.grid-4 { display:grid; grid-template-columns:repeat(4,1fr); gap:3px; margin:16px 0; }
+.card { background:var(--bg-mid); border:1px solid var(--border2); padding:26px 22px; position:relative; }
+.card-accent { position:absolute; top:0; left:0; right:0; height:3px; background:var(--blue); }
+.card-accent.teal  { background:var(--teal); }
+.card-accent.steel { background:var(--steel); }
+.card-accent.amber { background:var(--amber); }
+.card-accent.red   { background:var(--red); }
+.card-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:10px; display:block; font-weight:600; }
+.card-label.teal  { color:#3dbfaa; }
+.card-label.steel { color:#7da0cc; }
+.card-heading { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:700; color:var(--text); margin-bottom:12px; line-height:1.15; text-transform:uppercase; letter-spacing:0.02em; }
+.card-body { font-size:15px; color:var(--muted); line-height:1.78; font-weight:300; }
+.card-body strong { color:var(--text); font-weight:500; }
+
+/* ── CALLOUT ── */
+.callout { border:1px solid var(--border); background:rgba(238,240,244,0.02); padding:26px 30px; margin:18px 0; display:flex; gap:20px; align-items:flex-start; }
+.callout-bar { width:3px; background:var(--blue); flex-shrink:0; align-self:stretch; min-height:20px; }
+.callout-bar.teal  { background:var(--teal); }
+.callout-bar.red   { background:var(--red); }
+.callout-bar.amber { background:var(--amber); }
+.callout-label { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:10px; font-weight:600; }
+.callout-label.teal  { color:#3dbfaa; }
+.callout-label.red   { color:#d06060; }
+.callout-label.amber { color:#d9963a; }
+.callout p { font-size:16px; color:var(--muted); line-height:1.82; font-weight:300; }
+.callout p strong { color:var(--text); font-weight:500; }
+
+/* ── QUOTE ── */
+.quote-block { padding:48px 52px; border:1px solid var(--border); background:var(--bg-mid); margin:24px 0; position:relative; overflow:hidden; }
+.quote-block::before { content:'\201C'; position:absolute; top:-16px; left:28px; font-family:'Barlow Condensed',sans-serif; font-size:160px; font-weight:800; color:var(--blue); opacity:0.06; line-height:1; pointer-events:none; }
+.quote-text { font-family:'Barlow Condensed',sans-serif; font-size:clamp(22px,2.8vw,36px); font-weight:600; color:var(--text); line-height:1.28; margin-bottom:20px; position:relative; text-transform:uppercase; letter-spacing:0.01em; }
+.quote-text em { color:var(--blue-lt); text-transform:none; font-family:'Barlow',sans-serif; font-weight:400; font-style:italic; font-size:0.8em; }
+.quote-source { font-size:12px; letter-spacing:0.2em; text-transform:uppercase; color:var(--faint); font-weight:500; }
+
+/* ── COMPARE TABLE ── */
+.compare { width:100%; border-collapse:collapse; margin:14px 0 24px; }
+.compare th { font-size:11px; letter-spacing:0.18em; text-transform:uppercase; padding:13px 16px; text-align:left; border-bottom:1px solid var(--border); font-weight:600; }
+.compare th.us   { color:var(--blue-lt); }
+.compare th.them { color:var(--faint); }
+.compare td { padding:14px 16px; border-bottom:1px solid var(--border2); font-size:14px; vertical-align:top; line-height:1.6; font-weight:300; }
+.compare tr:hover td { background:rgba(45,125,210,0.03); }
+.attr { color:var(--muted); font-size:12px; font-weight:500; letter-spacing:0.04em; }
+.us-td   { color:var(--text); }
+.them-td { color:rgba(238,240,244,0.22); }
+.check { color:var(--teal); margin-right:6px; font-size:13px; }
+.cross { color:var(--red); margin-right:6px; font-size:13px; opacity:0.7; }
+
+/* ── SETUP BLOCK ── */
+.setup-tier { border:1px solid var(--border); overflow:hidden; margin-bottom:4px; }
+.setup-tier-header { background:var(--bg-card); padding:30px 34px; display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; border-bottom:1px solid var(--border); }
+.setup-badge { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:8px; display:block; font-weight:600; }
+.setup-name { font-family:'Barlow Condensed',sans-serif; font-size:30px; font-weight:800; color:var(--text); text-transform:uppercase; letter-spacing:0.04em; line-height:1.1; margin-bottom:8px; }
+.setup-desc { font-size:14px; color:var(--muted); font-weight:300; }
+.setup-price { text-align:right; }
+.setup-price-num { font-family:'Barlow Condensed',sans-serif; font-size:54px; font-weight:800; color:var(--blue-lt); display:block; line-height:1; }
+.setup-price-lbl { font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--faint); display:block; margin-top:5px; font-weight:500; }
+.setup-body { padding:32px 34px; background:var(--bg-mid); }
+.setup-section-title { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:14px; margin-top:28px; font-weight:600; }
+.setup-section-title:first-child { margin-top:0; }
+
+/* ── DELIVERABLES ── */
+.deliverable-grid   { display:grid; grid-template-columns:1fr 1fr; gap:3px; margin-bottom:4px; }
+.deliverable-grid-3 { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin-bottom:4px; }
+.deliverable { background:var(--whisper); border:1px solid var(--border2); padding:12px 14px; display:flex; align-items:flex-start; gap:10px; }
+.deliverable-check { color:var(--teal); font-size:12px; flex-shrink:0; margin-top:3px; font-weight:600; }
+.deliverable-text { font-size:13px; color:var(--muted); line-height:1.5; font-weight:300; }
+.deliverable-text strong { color:var(--text); font-weight:500; display:block; margin-bottom:2px; font-size:13px; }
+
+/* ── PRICING PLANS ── */
+.plan-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; margin:18px 0; }
+.plan-card { background:var(--bg-mid); border:1px solid var(--border); overflow:hidden; }
+.plan-card.featured { border-color:var(--blue); }
+.plan-top { background:var(--bg-card); padding:28px 26px; border-bottom:1px solid var(--border); position:relative; }
+.plan-card.featured .plan-top { background:rgba(45,125,210,0.1); border-bottom-color:rgba(45,125,210,0.3); }
+.plan-flag { position:absolute; top:18px; right:18px; background:var(--blue); color:#fff; font-size:9px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; padding:4px 10px; }
+.plan-badge { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:8px; display:block; font-weight:600; }
+.plan-name { font-family:'Barlow Condensed',sans-serif; font-size:30px; font-weight:800; color:var(--text); text-transform:uppercase; letter-spacing:0.04em; line-height:1; margin-bottom:6px; }
+.plan-period { font-size:13px; color:var(--muted); font-weight:400; margin-bottom:16px; letter-spacing:0.04em; }
+.plan-price-row { display:flex; align-items:flex-end; gap:6px; }
+.plan-price { font-family:'Barlow Condensed',sans-serif; font-size:56px; font-weight:800; color:var(--blue-lt); line-height:1; letter-spacing:-0.01em; }
+.plan-price-lbl { font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:var(--faint); font-weight:500; margin-bottom:8px; }
+.plan-then { font-size:13px; color:var(--muted); margin-top:10px; font-weight:300; }
+.plan-then strong { color:var(--blue-lt); font-weight:600; }
+.plan-body { padding:24px 26px; }
+.plan-section-title { font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:12px; margin-top:20px; font-weight:600; }
+.plan-section-title:first-child { margin-top:0; }
+.plan-item { display:flex; align-items:flex-start; gap:10px; padding:9px 0; border-bottom:1px solid var(--border2); }
+.plan-item:last-child { border-bottom:none; }
+.plan-check { color:var(--teal); font-size:12px; flex-shrink:0; margin-top:3px; font-weight:600; }
+.plan-text { font-size:13px; color:var(--muted); line-height:1.5; font-weight:300; }
+.plan-text strong { color:var(--text); font-weight:500; display:block; margin-bottom:1px; font-size:13px; }
+
+/* ── VALUE GRID ── */
+.val-label { font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:var(--steel); margin:26px 0 12px; display:flex; align-items:center; gap:14px; font-weight:600; }
+.val-label::before { content:''; flex:0 0 24px; height:2px; background:var(--steel); }
+.val-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+.val { background:rgba(45,125,210,0.06); border:1px solid rgba(45,125,210,0.16); padding:16px 18px; }
+.val-heading { font-size:14px; color:var(--text); font-weight:600; margin-bottom:6px; line-height:1.3; }
+.val-body { font-size:13px; color:var(--muted); line-height:1.72; font-weight:300; }
+.val-body strong { color:var(--text); font-weight:500; }
+
+/* ── TIMELINE ── */
+.timeline { display:grid; grid-template-columns:repeat(3,1fr); gap:3px; margin:16px 0; }
+.phase { border:1px solid var(--border); padding:26px 22px; background:var(--bg-mid); }
+.phase-num { font-family:'Barlow Condensed',sans-serif; font-size:56px; font-weight:800; color:var(--blue); opacity:0.12; line-height:1; display:block; margin-bottom:4px; }
+.phase-label { font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--blue-lt); margin-bottom:8px; font-weight:600; }
+.phase-name { font-family:'Barlow Condensed',sans-serif; font-size:22px; font-weight:700; color:var(--text); margin-bottom:16px; text-transform:uppercase; letter-spacing:0.03em; }
+.phase ul { list-style:none; display:flex; flex-direction:column; gap:8px; }
+.phase li { font-size:13px; color:var(--muted); padding-left:14px; border-left:2px solid var(--border); line-height:1.5; font-weight:300; }
+.phase li strong { color:var(--text); font-weight:500; display:block; }
+
+/* ── ROI GRID ── */
+.roi-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:3px; margin:16px 0; }
+.roi-card { background:var(--bg-mid); border:1px solid var(--border2); padding:22px 18px; }
+.roi-num { font-family:'Barlow Condensed',sans-serif; font-size:40px; font-weight:800; color:var(--blue-lt); display:block; line-height:1; margin-bottom:6px; }
+.roi-label { font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--faint); display:block; margin-bottom:10px; font-weight:500; }
+.roi-note { font-size:13px; color:var(--muted); line-height:1.65; font-weight:300; }
+.roi-note strong { color:var(--text); font-weight:500; }
+
+/* ── SUMMARY TABLE ── */
+.sum-table { border:1px solid var(--border); overflow:hidden; margin-bottom:24px; }
+.sum-row { display:grid; grid-template-columns:1fr 160px 220px; border-bottom:1px solid var(--border2); }
+.sum-row.hdr { background:rgba(45,125,210,0.08); border-bottom:1px solid var(--border); }
+.sum-row.hdr > div { padding:14px 22px; font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--blue-lt); font-weight:600; }
+.sum-row > div { padding:18px 22px; }
+.sum-label { font-size:15px; color:var(--text); font-weight:500; }
+.sum-sub { font-size:13px; color:var(--muted); margin-top:4px; font-weight:300; }
+.sum-num { font-family:'Barlow Condensed',sans-serif; font-size:28px; font-weight:700; color:var(--blue-lt); align-self:center; }
+.sum-timing { font-size:13px; color:var(--muted); align-self:center; font-weight:300; }
+.sum-divider { background:rgba(45,125,210,0.05); border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
+.sum-divider > div { padding:10px 22px; font-size:10px; letter-spacing:0.22em; text-transform:uppercase; color:var(--blue); font-weight:600; }
+.sum-strike .sum-num { color:var(--faint); text-decoration:line-through; font-size:22px; }
+.sum-total-row { background:rgba(42,138,122,0.07); border-top:1px solid rgba(42,138,122,0.25); border-bottom:none; }
+.sum-total-big { font-family:'Barlow Condensed',sans-serif; font-size:38px; font-weight:800; color:#3dbfaa; padding:22px; align-self:center; }
+.sum-total-note { font-size:13px; color:#3dbfaa; padding:22px; align-self:center; font-weight:400; }
+
+/* ── FOOTER ── */
+.doc-footer { border-top:1px solid var(--border); padding:28px var(--pad); display:flex; justify-content:space-between; align-items:center; font-size:13px; color:var(--faint); letter-spacing:0.06em; flex-wrap:wrap; gap:12px; }
+</style>
+</head>
+
+<body>
+
+<div class="cover">
+  <div class="cover-accent-bar"></div>
+  <div class="cover-top">
+    <div>
+      <span class="cover-logo-name">Nixon Plastic Surgery</span>
+      <span class="cover-logo-sub">Nashville, Tennessee</span>
+    </div>
+    <div class="cover-badge">Revised Proposal · April 2026</div>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-eyebrow">Website & Digital Marketing Proposal · Azalea Digital Marketing</div>
+    <h1 class="cover-h1">Launch It Right.<br>Build It Steady.<br><em>A practical growth plan for year one.</em></h1>
+    <p class="cover-sub">
+      This revised structure is built around what matters most right now:
+      <strong>getting Nixon Plastic Surgery live with a premium foundation</strong>,
+      then building authority at a pace that feels sustainable. The setup covers the full launch scope.
+      The monthly plan keeps Nashville moving first, with a clear option to slowly expand into Franklin later.
+    </p>
+    <div class="cover-stats">
+      <div class="cstat"><span class="cstat-num">$5,000</span><span class="cstat-lbl">Setup Fee</span></div>
+      <div class="cstat"><span class="cstat-num">$599</span><span class="cstat-lbl">Months 1–6</span></div>
+      <div class="cstat"><span class="cstat-num">$799</span><span class="cstat-lbl">Optional Ramp</span></div>
+      <div class="cstat"><span class="cstat-num">$300</span><span class="cstat-lbl">Base Floor</span></div>
+      <div class="cstat"><span class="cstat-num">12</span><span class="cstat-lbl">Month Agreement</span></div>
+      <div class="cstat"><span class="cstat-num">3</span><span class="cstat-lbl">Month Sprints</span></div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <span>Prepared for Dr. Nixon · Confidential</span>
+    <span>Azalea Digital Marketing · Revised structure</span>
+  </div>
+</div>
+
+<div class="doc">
+
+  <div class="sec" style="border-top:none; padding-top:80px; margin-top:0;">
+    <div class="sec-hd">
+      <div>
+        <span class="sec-num">01</span>
+        <div class="sec-eye">The Deal</div>
+        <h2 class="sec-title">A cleaner structure.<br><em>Same foundation, slower monthly pace.</em></h2>
+      </div>
+      <span class="sec-tag">Overview</span>
+    </div>
+
+    <div class="callout">
+      <div class="callout-bar"></div>
+      <div class="callout-inner">
+        <div class="callout-label">What Changed</div>
+        <p>
+          The launch scope stays strong, but the monthly plan becomes more realistic.
+          <strong>The goal is to build a real asset without forcing the practice into an aggressive spend too early.</strong>
+          This keeps the site premium from day one while giving Dr. Nixon room to grow into the bigger authority build over time.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-accent"></div>
+        <span class="card-label">Setup</span>
+        <div class="card-heading">$5,000 One-Time</div>
+        <p class="card-body">
+          Full launch foundation: 10 procedures, 10 galleries, 2 blogs, and 12 core pages.
+          Enough to launch like a real practice, not a placeholder.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-accent steel"></div>
+        <span class="card-label steel">Months 1–6</span>
+        <div class="card-heading">$599 / Month</div>
+        <p class="card-body">
+          Steady Nashville-only growth while existing galleries get built out.
+          Includes 1 procedure page and 1 blog each month.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-accent teal"></div>
+        <span class="card-label teal">Months 7–12</span>
+        <div class="card-heading">Stay Flat or Ramp</div>
+        <p class="card-body">
+          Continue at the same pace, or move to the $799 structure for a faster drip into Franklin and more procedure growth.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div>
+        <span class="sec-num">02</span>
+        <div class="sec-eye">Launch Scope</div>
+        <h2 class="sec-title">What the $5,000 setup includes.<br><em>Everything needed to launch credibly.</em></h2>
+      </div>
+      <span class="sec-tag">One-Time</span>
+    </div>
+
+    <div class="setup-tier">
+      <div class="setup-tier-header">
+        <div>
+          <span class="setup-badge">Site Foundation & Launch</span>
+          <div class="setup-name">$5,000 Setup Fee</div>
+          <div class="setup-desc">
+            Full launch package built to get Nixon Plastic Surgery live with a real foundation — not a stripped-down starter site.
+          </div>
+        </div>
+        <div class="setup-price">
+          <span class="setup-price-num">$5,000</span>
+          <span class="setup-price-lbl">One-Time Investment</span>
+        </div>
+      </div>
+
+      <div class="setup-body">
+        <div class="setup-section-title">Included Deliverables</div>
+        <div class="deliverable-grid-3">
+          <div class="deliverable"><span class="deliverable-check">✓</span><div class="deliverable-text"><strong>12 Core Pages</strong>Homepage, about, bio, consultation, contact, reviews, gallery hub, patient resources, and essential practice pages.</div></div>
+          <div class="deliverable"><span class="deliverable-check">✓</span><div class="deliverable-text"><strong>10 Procedure Pages</strong>Custom written and optimized for launch priorities.</div></div>
+          <div class="deliverable"><span class="deliverable-check">✓</span><div class="deliverable-text"><strong>10 Existing Gallery Pages</strong>10 of the 25 existing galleries are included at launch.</div></div>
+          <div class="deliverable"><span class="deliverable-check">✓</span><div class="deliverable-text"><strong>2 Blog Posts</strong>Initial authority content to support launch and SEO foundation.</div></div>
+          <div class="deliverable"><span class="deliverable-check">✓</span><div class="deliverable-text"><strong>Brand + Design</strong>Premium look and feel consistent with a serious Nashville launch.</div></div>
+          <div class="deliverable"><span class="deliverable-check">✓</span><div class="deliverable-text"><strong>Technical Setup</strong>Analytics, search setup, tracking, forms, performance baseline, and core SEO configuration.</div></div>
+        </div>
+
+        <div class="val-label">Why this setup matters</div>
+        <div class="val-grid">
+          <div class="val">
+            <div class="val-heading">It gets the practice live the right way.</div>
+            <div class="val-body">This is enough scope to look established from day one — not half-built, not temporary, and not something that needs immediate rebuilding.</div>
+          </div>
+          <div class="val">
+            <div class="val-heading">It protects the brand early.</div>
+            <div class="val-body">The first version patients see matters. A premium setup makes every future SEO, content, and gallery investment work harder.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div>
+        <span class="sec-num">03</span>
+        <div class="sec-eye">Monthly Structure</div>
+        <h2 class="sec-title">The first six months.<br><em>Controlled pace, steady progress.</em></h2>
+      </div>
+      <span class="sec-tag">Months 1–6</span>
+    </div>
+
+    
+    <div class="plan-grid">
+      <div class="plan-card featured">
+        <div class="plan-top">
+          <div class="plan-flag">Core Plan</div>
+          <span class="plan-badge">Months 1–6</span>
+          <div class="plan-name">$599 / Month</div>
+          <div class="plan-period">Nashville-only growth plan</div>
+          <div class="plan-then">Structured to drip out the remaining 15 existing galleries while adding 1 new procedure page each month.</div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-section-title">Included Every Month</div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>Website Management</strong>Hosting-level oversight, updates, maintenance, edits, and keeping the site clean and functional.</div></div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>Minimally Required SEO</strong>Basic on-page upkeep, technical checks, and keeping the Nashville foundation moving.</div></div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>1 Procedure Page / Month</strong>One new procedure page per month to keep service depth growing.</div></div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>Remaining 15 Existing Galleries</strong>Dripped out across the first 6 months as part of the core plan.</div></div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>Average Pace</strong>Roughly 3.5 content pieces per month on average across procedure and gallery output.</div></div>
+        </div>
+      </div>
+
+      <div class="plan-card">
+        <div class="plan-top">
+          <span class="plan-badge">What $599 Is Really Doing</span>
+          <div class="plan-name">Steady Build-Out</div>
+          <div class="plan-period">Focused on existing assets first</div>
+          <div class="plan-then">This phase is about completing the Nashville foundation before layering in more aggressive content production.</div>
+        </div>
+        <div class="plan-body">
+          <div class="plan-section-title">First 6-Month Goal</div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>Launch + backlog completion</strong>10 galleries go live at launch, then the remaining 15 existing galleries are steadily added.</div></div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>Procedure depth keeps growing</strong>One new procedure page per month adds service authority while the gallery library gets completed.</div></div>
+          <div class="plan-item"><span class="plan-check">✓</span><div class="plan-text"><strong>Nashville only</strong>No Franklin or GEO expansion under this structure — all effort stays concentrated in the primary market.</div></div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="callout">
+      <div class="callout-bar teal"></div>
+      <div class="callout-inner">
+        <div class="callout-label teal">How to think about months 1–6</div>
+        <p>
+          The first six months are about <strong>building depth in Nashville first</strong> while the remaining 15 existing galleries are steadily dripped out alongside new procedure content.
+          This keeps the launch premium while continuing to build out the site's core asset base.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div>
+        <span class="sec-num">04</span>
+        <div class="sec-eye">Second Sprint</div>
+        <h2 class="sec-title">Months 7–12.<br><em>Stay steady or enter the acceleration phase.</em></h2>
+      </div>
+      <span class="sec-tag">Options</span>
+    </div>
+
+    
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-accent steel"></div>
+        <span class="card-label steel">Option A</span>
+        <div class="card-heading">Continue at $599 / Month</div>
+        <p class="card-body" style="margin-bottom:14px;">
+          Keep the same structure through the back half of the year: website management, minimally required SEO, and a slower Nashville-only build pace.
+        </p>
+        <div style="border-top:1px solid var(--border2); padding-top:14px;">
+          <div style="font-size:13px; color:var(--muted); font-weight:300; line-height:1.7;">
+            Best if Dr. Nixon wants to stay disciplined on spend and keep momentum moving without increasing content production.
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-accent teal"></div>
+        <span class="card-label teal">Option B</span>
+        <div class="card-heading">Ramp to $799 / Month</div>
+        <p class="card-body" style="margin-bottom:14px;">
+          Increase the monthly build pace and transition into an acceleration phase focused on higher content output while staying concentrated on Nashville.
+        </p>
+        <div style="border-top:1px solid var(--border2); padding-top:14px; display:flex; flex-direction:column; gap:10px;">
+          <div style="font-size:13px; color:var(--muted); font-weight:300; line-height:1.6;"><strong style="color:var(--text); display:block; margin-bottom:2px;">2 procedure pages / month</strong>More service depth, faster.</div>
+          <div style="font-size:13px; color:var(--muted); font-weight:300; line-height:1.6;"><strong style="color:var(--text); display:block; margin-bottom:2px;">3 mixed assets / month</strong>A combo of new galleries, blogs, and case studies totaling 3 per month.</div>
+          <div style="font-size:13px; color:var(--muted); font-weight:300; line-height:1.6;"><strong style="color:var(--text); display:block; margin-bottom:2px;">5 content pieces / month total</strong>Built around 2 procedure pages plus 3 mixed supporting assets.</div>
+          <div style="font-size:13px; color:var(--muted); font-weight:300; line-height:1.6;"><strong style="color:var(--text); display:block; margin-bottom:2px;">Still Nashville only</strong>No Franklin or GEO expansion under this plan.</div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="callout">
+      <div class="callout-bar amber"></div>
+      <div class="callout-inner">
+        <div class="callout-label amber">The practical difference</div>
+        <p>
+          <strong>Months 7–12 are about pace.</strong>
+          Stay disciplined at $599, or step into an acceleration phase that increases content output and opens the door to expansion into Franklin.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div>
+        <span class="sec-num">05</span>
+        <div class="sec-eye">Agreement Structure</div>
+        <h2 class="sec-title">Flexible pace.<br><em>Clear commitment.</em></h2>
+      </div>
+      <span class="sec-tag">Terms</span>
+    </div>
+
+    <div class="timeline">
+      <div class="phase">
+        <span class="phase-num">01</span>
+        <div class="phase-label">Contract</div>
+        <div class="phase-name">12-Month Agreement</div>
+        <ul>
+          <li><strong>One-year term</strong>Enough time to launch, build, and evaluate meaningful traction.</li>
+          <li><strong>Not a rushed sprint</strong>Built for real growth, not vanity metrics in 30 days.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <span class="phase-num">02</span>
+        <div class="phase-label">Review Cadence</div>
+        <div class="phase-name">3-Month Sprints</div>
+        <ul>
+          <li><strong>Quarterly checkpoints</strong>Review what got built, what is working, and whether pace needs to change.</li>
+          <li><strong>Natural decision points</strong>Good structure for staying aligned without changing strategy every few weeks.</li>
+        </ul>
+      </div>
+
+      <div class="phase">
+        <span class="phase-num">03</span>
+        <div class="phase-label">Safety Valve</div>
+        <div class="phase-name">$300 Base Floor</div>
+        <ul>
+          <li><strong>Can drop to base at any time</strong>If needed, the plan can always reduce to simple website management and minimally required SEO.</li>
+          <li><strong>Keeps the asset alive</strong>The site stays maintained even if growth pace needs to slow temporarily.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div>
+        <span class="sec-num">06</span>
+        <div class="sec-eye">Investment Summary</div>
+        <h2 class="sec-title">What year one looks like.<br><em>Conservative, premium, flexible.</em></h2>
+      </div>
+      <span class="sec-tag">Summary</span>
+    </div>
+
+    
+
+<div class="sum-table">
+  <div class="sum-row hdr">
+    <div>Plan</div><div>Amount</div><div>Timing</div>
+  </div>
+
+  <div class="sum-row">
+    <div>
+      <div class="sum-label">Tier 1 — Foundation</div>
+      <div class="sum-sub">
+        $300 website management + minimally required SEO, plus the remaining 15 existing galleries and 1 procedure page dripped across the first 6 months.
+        Roughly 3.5 content pieces/mo on average, including 1 procedure page.
+      </div>
+    </div>
+    <div class="sum-num">$599</div>
+    <div class="sum-timing">Months 1–6</div>
+  </div>
+
+  <div class="sum-row">
+    <div>
+      <div class="sum-label">Tier 2 — Acceleration</div>
+      <div class="sum-sub">
+        Beginning in month 7, move to 2 procedure pages plus a combo of new galleries, blogs, and case studies totaling 3 additional pieces per month.
+        5 content pieces/mo total, including 2 procedure pages. Nashville only.
+      </div>
+    </div>
+    <div class="sum-num">$799</div>
+    <div class="sum-timing">Optional · Months 7–12</div>
+  </div>
+
+  <div class="sum-row" style="background:rgba(45,125,210,0.04); border-top:1px solid var(--border);">
+    <div>
+      <div class="sum-label" style="color:var(--blue-lt);">Tier 3 — Growth</div>
+      <div class="sum-sub">
+        3 procedure pages/month + supporting content across blogs, galleries, case studies, and condition pages.
+        Includes email marketing, Franklin marketing, and review &amp; reputation monitoring and management.
+        7 total content pieces/month.
+      </div>
+    </div>
+    <div class="sum-num">$999</div>
+    <div class="sum-timing">Optional upgrade</div>
+  </div>
+
+  <div class="sum-row">
+    <div>
+      <div class="sum-label">Social Package Add-On</div>
+      <div class="sum-sub">
+        3–4 social posts per month. Can be added on top of any plan.
+      </div>
+    </div>
+    <div class="sum-num">$200</div>
+    <div class="sum-timing">Per month</div>
+  </div>
+</div>
+
+  <div class="callout">
+      <div class="callout-bar"></div>
+      <div class="callout-inner">
+        <div class="callout-label">Bottom Line</div>
+        <p>
+          This structure keeps the quality high while making the monthly commitment more realistic.
+          <strong>It launches like a serious practice, stays focused on Nashville, and leaves room to speed up content production when the time is right.</strong>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-hd">
+      <div>
+        <span class="sec-num">07</span>
+        <div class="sec-eye">Next Steps</div>
+        <h2 class="sec-title">What we do next.<br><em>Get it live, then keep building.</em></h2>
+      </div>
+      <span class="sec-tag">Kickoff</span>
+    </div>
+
+    <div class="grid-2" style="margin-top:20px;">
+      <div class="card">
+        <div class="card-accent"></div>
+        <span class="card-label">Step 1</span>
+        <div class="card-heading">Approve the revised structure</div>
+        <p class="card-body">
+          Lock in the $5,000 setup and confirm the first six months at $599, focused on completing the Nashville foundation and rolling out existing galleries.
+        </p>
+      </div>
+
+      <div class="card">
+        <div class="card-accent teal"></div>
+        <span class="card-label teal">Step 2</span>
+        <div class="card-heading">Kickoff the launch build</div>
+        <p class="card-body">
+          Confirm the 10 launch procedures, gather initial assets, align on design direction, and begin the build toward launch.
+        </p>
+      </div>
+    </div>
+
+    <div class="quote-block">
+      <div class="quote-text">This plan is built to make the launch feel premium <em>without forcing the growth plan to move faster than the practice wants it to.</em></div>
+      <div class="quote-source">Azalea Digital Marketing · Revised Nixon proposal</div>
+    </div>
+  </div>
+
+</div>
+
+<div class="doc-footer">
+  <span>Nixon Plastic Surgery · Revised Digital Marketing Proposal</span>
+  <span>April 2026 · Confidential</span>
+  <span>Azalea Digital Marketing</span>
+</div>
+
+</body>
+</html>
